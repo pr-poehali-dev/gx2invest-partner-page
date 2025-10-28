@@ -457,61 +457,45 @@ export default function Index() {
                 <Icon name="Building2" className="w-6 h-6 text-background" />
               </a>
             </div>
-            <a href="tel:+78007751376" className="text-2xl font-heading font-semibold hover:text-primary transition-colors">
-              +7 (800) 775-13-76
-            </a>
+            <div className="text-right">
+              <a href="tel:+78007751376" className="block text-2xl font-heading font-semibold hover:text-primary transition-colors mb-2">
+                +7 (800) 775-13-76
+              </a>
+              <a href="mailto:partners@gx2invest.ru" className="block text-lg text-muted-foreground hover:text-primary transition-colors">
+                partners@gx2invest.ru
+              </a>
+            </div>
           </div>
           
           <div className="mb-8">
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Изложенная на этом сайте информация содержит общий обзор продуктов и услуг, предлагаемых АО «Джи Экс Ту Инвест» (торговая марка GX2Invest, далее GX2Invest). Информация предназначена исключительно для внимания лиц, которым она адресована Подробнее
+              Изложенная на этом сайте информация содержит общий обзор продуктов и услуг, предлагаемых АО «Джи Экс Ту Инвест» (торговая марка GX2Invest, далее GX2Invest). Информация предназначена исключительно для внимания лиц, которым она адресована{' '}
+              <a href="https://gx2invest.ru/informations/disclaimer" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Подробнее
+              </a>
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+              <a href="https://gx2invest.ru/informations/protection-policy" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
                 Политика защиты и обработки персональных данных
               </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://gx2invest.ru/informations/cookies-policy" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                 Политика в отношении файлов cookies
               </a>
             </div>
             
             <div>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Информация о компании
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Документы и отчетность
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Деятельность компании
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
-                Дополнительная информация
-              </a>
-            </div>
-            
-            <div>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Пресс-релизы
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Инвестиционные идеи
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
-                Запрос в компанию
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
-                Контакты
+              <a href="https://gx2invest.ru/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                Основной сайт
               </a>
             </div>
           </div>
           
           <div className="border-t border-muted pt-8">
             <p className="text-sm text-muted-foreground">
-              © 2006 - 2024 GX2 INVEST Лицензия Центрального банка России № 065-12598-001000
+              © 2006 - 2025 GX2 INVEST Лицензия Центрального банка России № 065-12598-001000
             </p>
           </div>
         </div>
