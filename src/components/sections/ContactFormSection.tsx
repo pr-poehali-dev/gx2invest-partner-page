@@ -96,9 +96,18 @@ export default function ContactFormSection() {
               />
               <Label 
                 htmlFor="consent" 
-                className="text-sm text-muted-foreground cursor-pointer leading-relaxed"
+                className="text-sm text-muted-foreground leading-relaxed"
               >
-                Я согласен на обработку персональных данных и принимаю условия политики конфиденциальности
+                Я согласен на обработку персональных данных и принимаю условия{' '}
+                <a 
+                  href="https://gx2invest.ru/informations/protection-policy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  политики конфиденциальности
+                </a>
               </Label>
             </div>
 
