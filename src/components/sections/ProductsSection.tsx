@@ -16,7 +16,11 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
         'Минимальная сумма от 3 млн руб',
         'Стратегии от консервативных до агрессивных',
         'Доступ к российским и международным рынкам'
-      ]
+      ],
+      link: {
+        text: 'Примеры управления',
+        url: 'https://gx2invest.ru/#strategies'
+      }
     },
     {
       icon: 'Wallet',
@@ -26,7 +30,11 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
         'Минимальная сумма от 400 тыс руб',
         'Налоговые льготы: вычет до 52 тыс руб/год или освобождение от налога на доход',
         'Диверсификация рисков и регулярная ребалансировка портфеля'
-      ]
+      ],
+      link: {
+        text: 'Доходность ИИС',
+        url: 'https://gx2invest.ru/iis'
+      }
     },
     {
       icon: 'Shield',
@@ -68,7 +76,7 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
               <p className="text-muted-foreground mb-6">
                 {product.description}
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-6">
                 {product.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -76,6 +84,18 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
                   </li>
                 ))}
               </ul>
+              
+              {product.link && (
+                <a 
+                  href={product.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+                >
+                  {product.link.text}
+                  <Icon name="ExternalLink" className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              )}
             </Card>
           ))}
         </div>
