@@ -100,14 +100,34 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button 
-            onClick={onCTAClick}
-            size="lg" 
-            className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            Стать партнером
-          </Button>
+        <div className="text-center space-y-4">
+          <div>
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+            >
+              <a 
+                href="https://gx2invest.ru/files/partner-presentation.pdf" 
+                download
+                className="inline-flex items-center gap-2"
+              >
+                <Icon name="Download" className="w-5 h-5" />
+                Скачать презентацию для партнеров
+              </a>
+            </Button>
+          </div>
+          
+          <div>
+            <Button 
+              onClick={onCTAClick}
+              size="lg" 
+              className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Стать партнером
+            </Button>
+          </div>
         </div>
       </div>
     </section>
