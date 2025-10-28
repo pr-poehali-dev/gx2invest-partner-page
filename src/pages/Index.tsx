@@ -6,6 +6,7 @@ import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import FAQSection from '@/components/sections/FAQSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactFormSection from '@/components/sections/ContactFormSection';
+import Footer from '@/components/sections/Footer';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -22,6 +23,7 @@ export default function Index() {
       <FAQSection />
       <TestimonialsSection onCTAClick={scrollToForm} />
       <ContactFormSection />
+      <Footer />
     </div>
   );
 }
