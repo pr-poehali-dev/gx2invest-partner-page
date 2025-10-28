@@ -9,10 +9,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div>
             <h3 className="font-heading font-bold text-xl mb-4 text-foreground">
-              Gx2Invest
+              АО "Джи Экс Ту Инвест"<br />
+              <span className="text-sm font-normal">(торговая марка Gx2 Invest)</span>
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Профессиональное управление активами с 2006 года
+              <a href="https://gx2invest.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Основной сайт
+              </a>
             </p>
             <p className="text-xs text-muted-foreground mt-4">
               Лицензия ЦБ РФ<br />
@@ -39,7 +42,9 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="MapPin" className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                <span>Москва, Екатеринбург</span>
+                <a href="https://gx2invest.ru/contacts" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Москва, Екатеринбург
+                </a>
               </li>
             </ul>
           </div>
@@ -55,17 +60,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Условия программы
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Обучение
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#faq-section" className="hover:text-primary transition-colors">
                   FAQ
                 </a>
               </li>
