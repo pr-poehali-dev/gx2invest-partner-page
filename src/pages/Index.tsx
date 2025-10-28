@@ -447,14 +447,14 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-start mb-12">
             <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="VK">
+              <a href="https://vk.com/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="VK">
                 <Icon name="Share2" className="w-6 h-6 text-background" />
               </a>
-              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Telegram">
+              <a href="https://t.me/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Telegram">
                 <Icon name="Send" className="w-6 h-6 text-background" />
               </a>
-              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Logo">
-                <Icon name="Building2" className="w-6 h-6 text-background" />
+              <a href="https://dzen.ru/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Дзен">
+                <Icon name="Rss" className="w-6 h-6 text-background" />
               </a>
             </div>
             <div className="text-right">
