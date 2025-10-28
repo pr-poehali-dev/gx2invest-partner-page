@@ -7,6 +7,7 @@ import FAQSection from '@/components/sections/FAQSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactFormSection from '@/components/sections/ContactFormSection';
 import Footer from '@/components/sections/Footer';
+import ScrollToTop from '@/components/ui/ScrollToTop';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -24,6 +25,7 @@ export default function Index() {
       <TestimonialsSection onCTAClick={scrollToForm} />
       <ContactFormSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
