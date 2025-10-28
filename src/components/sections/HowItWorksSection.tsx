@@ -22,9 +22,9 @@ export default function HowItWorksSection({ onCTAClick }: HowItWorksSectionProps
     },
     {
       number: '03',
-      icon: 'GraduationCap',
-      title: 'Получите обучение',
-      description: 'Пройдите обучение по продуктам и инструментам продаж'
+      icon: 'FileSignature',
+      title: 'Заключите агентский договор',
+      description: 'как ИП или юр.лицо'
     },
     {
       number: '04',
