@@ -18,7 +18,7 @@ export default function HowItWorksSection({ onCTAClick }: HowItWorksSectionProps
       number: '02',
       icon: 'Users',
       title: 'Пройдите собеседование',
-      description: 'Встретьтесь с нашим менеджером и узнайте все детали программы'
+      description: 'с нашим менеджером и узнайте все детали программы'
     },
     {
       number: '03',
