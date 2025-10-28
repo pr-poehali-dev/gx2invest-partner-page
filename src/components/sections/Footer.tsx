@@ -117,7 +117,12 @@ export default function Footer() {
             © {currentYear} Gx2Invest. Все права защищены.
           </p>
           <div className="flex justify-center gap-6 mt-4 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
+            <a 
+              href="https://gx2invest.ru/informations/protection-policy" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
               Политика конфиденциальности
             </a>
             <a href="#" className="hover:text-primary transition-colors">
