@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -16,6 +16,50 @@ export default function Index() {
     email: '',
     consent: false
   });
+  
+  const [assetsCounter, setAssetsCounter] = useState(0);
+  const [yearsCounter, setYearsCounter] = useState(0);
+  const counterRef = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            
+            let assetsCount = 0;
+            const assetsTarget = 42;
+            const assetsInterval = setInterval(() => {
+              assetsCount += 1;
+              setAssetsCounter(assetsCount);
+              if (assetsCount >= assetsTarget) {
+                clearInterval(assetsInterval);
+              }
+            }, 30);
+            
+            let yearsCount = 0;
+            const yearsTarget = 20;
+            const yearsInterval = setInterval(() => {
+              yearsCount += 1;
+              setYearsCounter(yearsCount);
+              if (yearsCount >= yearsTarget) {
+                clearInterval(yearsInterval);
+              }
+            }, 50);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, [hasAnimated]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -126,13 +170,13 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-fade-in">
+              <div className="animate-fade-in" ref={counterRef}>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground">
                   Профессиональное управление с 2006 года
                 </h2>
                 <div className="space-y-4 text-lg text-muted-foreground">
                   <p>
-                    GX2 Invest является частью международной инвестиционно-финансовой группы с активами под управлением более 42 млрд.руб.
+                    GX2 Invest является частью международной инвестиционно-финансовой группы с активами под управлением более <span className="font-bold text-3xl text-primary">{assetsCounter}</span> млрд.руб.
                   </p>
                   <p className="text-foreground/80">
                     Лицензия Центрального Банка России № 065-12598-001000
@@ -169,7 +213,7 @@ export default function Index() {
                   {
                     icon: 'Award',
                     title: 'Экспертиза',
-                    description: 'Профессиональная команда с более чем с 20 летним опытом'
+                    description: `Профессиональная команда с более чем с ${yearsCounter}+ летним опытом`
                   }
                 ].map((item, index) => (
                   <Card 
@@ -399,42 +443,76 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-12">
+      <footer className="bg-secondary text-foreground py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="flex justify-between items-start mb-12">
+            <div className="flex gap-4">
+              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="VK">
+                <Icon name="Share2" className="w-6 h-6 text-background" />
+              </a>
+              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Telegram">
+                <Icon name="Send" className="w-6 h-6 text-background" />
+              </a>
+              <a href="#" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Logo">
+                <Icon name="Building2" className="w-6 h-6 text-background" />
+              </a>
+            </div>
+            <a href="tel:+78007751376" className="text-2xl font-heading font-semibold hover:text-primary transition-colors">
+              +7 (800) 775-13-76
+            </a>
+          </div>
+          
+          <div className="mb-8">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+              Изложенная на этом сайте информация содержит общий обзор продуктов и услуг, предлагаемых АО «Джи Экс Ту Инвест» (торговая марка GX2Invest, далее GX2Invest). Информация предназначена исключительно для внимания лиц, которым она адресована Подробнее
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="text-2xl font-heading font-bold mb-4">Gx2Invest</h3>
-              <p className="text-primary-foreground/80">
-                Профессиональные инвестиционные решения для вашего успеха
-              </p>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Политика защиты и обработки персональных данных
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                Политика в отношении файлов cookies
+              </a>
             </div>
             
             <div>
-              <h4 className="font-heading font-semibold mb-4">Контакты</h4>
-              <div className="space-y-2 text-primary-foreground/80">
-                <p>Email: partners@gx2invest.ru</p>
-                <p>Телефон: +7 (495) 123-45-67</p>
-              </div>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Информация о компании
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Документы и отчетность
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Деятельность компании
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                Дополнительная информация
+              </a>
             </div>
             
             <div>
-              <h4 className="font-heading font-semibold mb-4">Ссылки</h4>
-              <div className="space-y-2">
-                <a href="https://gx2invest.ru/" target="_blank" rel="noopener noreferrer" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Основной сайт
-                </a>
-                <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Политика конфиденциальности
-                </a>
-                <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Договор оферты
-                </a>
-              </div>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Пресс-релизы
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Инвестиционные идеи
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+                Запрос в компанию
+              </a>
+              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                Контакты
+              </a>
             </div>
           </div>
           
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; {new Date().getFullYear()} Gx2Invest. Все права защищены.</p>
+          <div className="border-t border-muted pt-8">
+            <p className="text-sm text-muted-foreground">
+              © 2006 - 2024 GX2 INVEST Лицензия Центрального банка России № 065-12598-001000
+            </p>
           </div>
         </div>
       </footer>
