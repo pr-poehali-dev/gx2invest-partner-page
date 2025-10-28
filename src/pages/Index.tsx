@@ -122,6 +122,77 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-20 bg-secondary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground">
+                  Профессиональное управление с 2006 года
+                </h2>
+                <div className="space-y-4 text-lg text-muted-foreground">
+                  <p>
+                    GX2 Invest является частью международной инвестиционно-финансовой группы с активами под управлением более 42 млрд.руб.
+                  </p>
+                  <p className="text-foreground/80">
+                    Лицензия Центрального Банка России № 065-12598-001000
+                  </p>
+                  <div className="pt-4 space-y-3">
+                    <a href="#" className="block text-primary hover:underline font-medium">
+                      Раскрытие информации →
+                    </a>
+                    <a href="#" className="block text-primary hover:underline font-medium">
+                      Пресс релизы →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 animate-scale-in">
+                {[
+                  {
+                    icon: 'Database',
+                    title: 'Все под контролем',
+                    description: 'Прозрачные условия, регулярная отчетность о результатах управления в вашем Личном кабинете.'
+                  },
+                  {
+                    icon: 'Users',
+                    title: 'Высокие стандарты',
+                    description: 'Член Национальной Ассоциации Участников Фондового Рынка с 2006 года'
+                  },
+                  {
+                    icon: 'TrendingUp',
+                    title: 'Удобно и выгодно',
+                    description: 'Вы не тратите свое время, мы реализуем ваши инвестиционные цели.'
+                  },
+                  {
+                    icon: 'Award',
+                    title: 'Экспертиза',
+                    description: 'Профессиональная команда с более чем с 20 летним опытом'
+                  }
+                ].map((item, index) => (
+                  <Card 
+                    key={index}
+                    className="p-6 hover:shadow-lg transition-all duration-300 bg-card border-border"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                      <Icon name={item.icon} className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="font-heading font-bold text-lg mb-2 text-card-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-16 text-foreground">
