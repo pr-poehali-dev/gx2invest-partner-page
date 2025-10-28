@@ -447,14 +447,20 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-start mb-12">
             <div className="flex gap-4">
-              <a href="https://vk.com/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="VK">
-                <Icon name="Share2" className="w-6 h-6 text-background" />
+              <a href="https://vk.com/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110" aria-label="VKontakte">
+                <svg className="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.15 14.77c-.42.45-1.19.62-1.95.62h-.62c-.64 0-.83-.29-1.67-1.13-.85-.87-1.23-1-1.45-1-.31 0-.4.09-.4.52v.93c0 .25-.08.4-1.17.4-1.79 0-3.77-1.08-5.17-3.1-2.09-2.93-2.66-5.13-2.66-5.58 0-.22.09-.43.52-.43h.93c.39 0 .54.18.69.6.77 2.16 2.07 4.05 2.6 4.05.2 0 .29-.09.29-.6v-2.31c-.06-.99-.58-1.08-.58-1.43 0-.18.15-.35.39-.35h1.46c.33 0 .45.18.45.56v3.13c0 .33.15.45.24.45.2 0 .36-.12.73-.49 1.13-1.27 1.94-3.23 1.94-3.23.11-.22.28-.43.72-.43h.93c.56 0 .68.29.56.68-.21.94-2.29 3.77-2.29 3.77-.17.27-.23.39 0 .71.17.23.73.72 1.11 1.15.68.78 1.21 1.43 1.35 1.89.14.45-.07.68-.64.68z"/>
+                </svg>
               </a>
-              <a href="https://t.me/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Telegram">
-                <Icon name="Send" className="w-6 h-6 text-background" />
+              <a href="https://t.me/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110" aria-label="Telegram">
+                <svg className="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
               </a>
-              <a href="https://dzen.ru/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-foreground/80 transition-colors" aria-label="Дзен">
-                <Icon name="Rss" className="w-6 h-6 text-background" />
+              <a href="https://dzen.ru/gx2invest" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110" aria-label="Яндекс Дзен">
+                <svg className="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                </svg>
               </a>
             </div>
             <div className="text-right">
