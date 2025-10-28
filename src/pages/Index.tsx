@@ -55,7 +55,7 @@ export default function Index() {
             <Button 
               onClick={scrollToForm}
               size="lg" 
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Стать партнером
             </Button>
@@ -137,13 +137,14 @@ export default function Index() {
                   <p className="text-foreground/80">
                     Лицензия Центрального Банка России № 065-12598-001000
                   </p>
-                  <div className="pt-4 space-y-3">
-                    <a href="#" className="block text-primary hover:underline font-medium">
-                      Раскрытие информации →
-                    </a>
-                    <a href="#" className="block text-primary hover:underline font-medium">
-                      Пресс релизы →
-                    </a>
+                  <div className="pt-6">
+                    <Button 
+                      onClick={scrollToForm}
+                      size="lg" 
+                      className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                    >
+                      Стать партнером
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -241,6 +242,15 @@ export default function Index() {
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Button 
+              onClick={scrollToForm}
+              size="lg" 
+              className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Стать партнером
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -250,9 +260,16 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">
               Помогайте клиентам эффективнее делать накопления, а сами зарабатывайте — больше
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Развивайте свой бизнес, предлагая клиентам профессиональные услуги по инвестированию и финансовому планированию. Вы консультируете и составляете планы, а мы берем на себя всю техническую и аналитическую работу по управлению активами на фондовых рынках России и мира.
             </p>
+            <Button 
+              onClick={scrollToForm}
+              size="lg" 
+              className="bg-[#F97316] text-white hover:bg-[#EA580C] text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Стать партнером
+            </Button>
           </div>
         </div>
       </section>
