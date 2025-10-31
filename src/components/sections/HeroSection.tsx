@@ -16,7 +16,7 @@ export default function HeroSection({ onCTAClick }: HeroSectionProps) {
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto">
             Получайте до <span className="font-bold text-3xl">50%</span> от комиссий полученных с клиентов.<br />
-            Ваша экспертиза — наш надежный бэкенд.
+            Ваши клиенты - наша экспертиза в инвестициях в ценные бумаги
           </p>
           <Button 
             onClick={onCTAClick}
