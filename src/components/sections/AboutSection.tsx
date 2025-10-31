@@ -89,7 +89,7 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
                   GX2 Invest является частью международной инвестиционно-финансовой группы с активами под управлением более <span className="font-bold text-3xl text-primary">{assetsCounter}</span> млрд.руб.
                 </p>
                 <p className="text-foreground/80">
-                  Лицензия Центрального Банка России № 065-12598-001000
+                  Лицензия на деятельность по управлению ценными бумагами Центрального Банка России № 065-12598-001000
                 </p>
                 <div className="pt-6">
                   <Button 
