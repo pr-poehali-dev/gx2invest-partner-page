@@ -114,7 +114,7 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
                 className="inline-flex items-center gap-2"
               >
                 <Icon name="Download" className="w-5 h-5" />
-                Скачать презентацию для партнеров
+                Презентация в pdf
               </a>
             </Button>
           </div>
