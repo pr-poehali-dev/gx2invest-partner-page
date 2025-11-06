@@ -39,7 +39,7 @@ export default function BenefitsSection() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-16 text-foreground">
-          Почему агенты выбирают Gx2Invest?
+          Почему партнеры выбирают Gx2Invest?
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
