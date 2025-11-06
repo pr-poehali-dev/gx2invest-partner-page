@@ -82,14 +82,14 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in" ref={counterRef}>
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground">
-                Профессиональное управление с 2006 года
+                Gx2Invest - профессиональный доверительный управляющий
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  GX2 Invest является частью международной инвестиционно-финансовой группы с активами под управлением более <span className="font-bold text-3xl text-primary">{assetsCounter}</span> млрд.руб.
+                  АО "Джи Экс Ту Инвест" (торговая марка GX2 Invest) входит в международную финансовую группу с активами под управлением более <span className="font-bold text-3xl text-primary">{assetsCounter}</span> млрд.руб.
                 </p>
                 <p className="text-foreground/80">
-                  Лицензия на деятельность по управлению ценными бумагами Центрального Банка России № 065-12598-001000
+                  Лицензия на деятельность по управлению ценными бумагами Банка России № 065-12598-001000 с 2006 года.
                 </p>
                 <div className="pt-6">
                   <Button 
