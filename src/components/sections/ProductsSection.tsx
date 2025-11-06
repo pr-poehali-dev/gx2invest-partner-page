@@ -109,8 +109,9 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
             >
               <a 
-                href="https://gx2invest.ru/files/partner-presentation.pdf" 
-                download
+                href="https://gx2invest.ru/storage/563/01K9CZVH5E200557H44S6H9FYE.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
                 <Icon name="Download" className="w-5 h-5" />
