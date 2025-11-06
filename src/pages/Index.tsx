@@ -22,7 +22,6 @@ export default function Index() {
       <HowItWorksSection onCTAClick={scrollToForm} />
       <AboutSection onCTAClick={scrollToForm} />
       <FAQSection />
-      <TestimonialsSection onCTAClick={scrollToForm} />
       <ContactFormSection />
       <Footer />
       <ScrollToTop />
