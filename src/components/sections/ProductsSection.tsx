@@ -53,7 +53,7 @@ export default function ProductsSection({ onCTAClick }: ProductsSectionProps) {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">
-            Какие продукты вы будете продавать?
+            Какие продукты мы предлагаем
           </h2>
           <p className="text-xl text-muted-foreground">
             Широкий выбор инвестиционных решений для разных типов клиентов
