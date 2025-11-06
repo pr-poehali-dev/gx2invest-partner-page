@@ -18,9 +18,9 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       <HeroSection onCTAClick={scrollToForm} />
       <BenefitsSection />
-      <AboutSection onCTAClick={scrollToForm} />
       <ProductsSection onCTAClick={scrollToForm} />
       <HowItWorksSection onCTAClick={scrollToForm} />
+      <AboutSection onCTAClick={scrollToForm} />
       <FAQSection />
       <TestimonialsSection onCTAClick={scrollToForm} />
       <ContactFormSection />
