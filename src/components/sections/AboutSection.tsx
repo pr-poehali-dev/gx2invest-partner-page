@@ -81,12 +81,15 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in" ref={counterRef}>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground">
-                Gx2 Invest - профессиональный доверительный управляющий
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 md:mb-8 text-foreground">
+                Gx2 Invest
               </h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
+              <p className="text-lg md:text-xl font-heading font-semibold mb-6 md:mb-8 text-foreground/80">
+                Профессиональный доверительный управляющий
+              </p>
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground">
                 <p>
-                  АО "Джи Экс Ту Инвест" (торговая марка GX2 Invest) входит в международную финансовую группу с активами под управлением более <span className="font-bold text-3xl text-primary">{assetsCounter}</span> млрд.руб.
+                  АО "Джи Экс Ту Инвест" входит в международную финансовую группу с активами под управлением более <span className="font-bold text-2xl md:text-3xl text-primary">{assetsCounter}</span> млрд руб.
                 </p>
                 <p className="text-foreground/80">
                   Лицензия на деятельность по управлению ценными бумагами Банка России № 065-12598-001000 с 2006 года.
@@ -103,19 +106,19 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 animate-scale-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 animate-scale-in">
               {features.map((feature, index) => (
                 <Card 
                   key={index}
-                  className="p-6 hover:shadow-xl transition-all duration-300 bg-card border-border"
+                  className="p-4 md:p-6 hover:shadow-xl transition-all duration-300 bg-card border-border"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 md:mb-4">
                     <Icon name={feature.icon} className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold mb-2 text-card-foreground">
+                  <h3 className="font-heading font-semibold mb-2 text-card-foreground text-sm md:text-base">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </Card>
