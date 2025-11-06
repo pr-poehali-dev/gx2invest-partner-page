@@ -12,7 +12,7 @@ export default function HeroSection({ onCTAClick }: HeroSectionProps) {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground mb-6 leading-tight">
-            Увеличивайте ваш доход с партнерской программой Gx2Invest
+            Партнерская программа Gx2Invest
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto">
             Получайте до <span className="font-bold text-3xl">50%</span> от комиссий полученных с клиентов.<br />
