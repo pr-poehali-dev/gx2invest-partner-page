@@ -82,7 +82,7 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in" ref={counterRef}>
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground">
-                Gx2Invest - профессиональный доверительный управляющий
+                Gx2 Invest - профессиональный доверительный управляющий
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>

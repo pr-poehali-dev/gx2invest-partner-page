@@ -114,7 +114,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Gx2Invest. Все права защищены.
+            © {currentYear} Gx2 Invest. Все права защищены.
           </p>
           <div className="flex justify-center mt-4 text-xs text-muted-foreground">
             <a 
