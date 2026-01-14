@@ -73,7 +73,7 @@ def handler(event: dict[str, Any], context) -> dict[str, Any]:
         msg = MIMEMultipart('alternative')
         msg['Subject'] = 'Новая заявка от партнера - Gx2 Invest'
         msg['From'] = smtp_user
-        msg['To'] = smtp_user
+        msg['To'] = 'partners@gx2invest.ru'
         
         text_content = f"""
 Новая заявка от партнера
