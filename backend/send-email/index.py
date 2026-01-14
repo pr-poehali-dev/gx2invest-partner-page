@@ -43,6 +43,8 @@ def handler(event: dict[str, Any], context) -> dict[str, Any]:
         phone = body.get('phone', '')
         email = body.get('email', '')
         
+        print(f"Получены данные: name={name}, phone={phone}, email={email}")
+        
         if not all([name, phone, email]):
             return {
                 'statusCode': 400,
@@ -59,14 +61,22 @@ def handler(event: dict[str, Any], context) -> dict[str, Any]:
         smtp_user = os.environ.get('SMTP_USER')
         smtp_password = os.environ.get('SMTP_PASSWORD')
         
+        print(f"SMTP config: host={smtp_host}, port={smtp_port}, user={smtp_user}, password={'***' if smtp_password else 'NOT SET'}")
+        
         if not all([smtp_host, smtp_user, smtp_password]):
+            missing = []
+            if not smtp_host: missing.append('SMTP_HOST')
+            if not smtp_user: missing.append('SMTP_USER')
+            if not smtp_password: missing.append('SMTP_PASSWORD')
+            error_msg = f'SMTP не настроен. Отсутствуют: {", ".join(missing)}'
+            print(f"ERROR: {error_msg}")
             return {
                 'statusCode': 500,
                 'headers': {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
-                'body': json.dumps({'error': 'SMTP не настроен'}),
+                'body': json.dumps({'error': error_msg}),
                 'isBase64Encoded': False
             }
         
@@ -111,15 +121,22 @@ Email: {email}
         msg.attach(part1)
         msg.attach(part2)
         
+        print(f"Подключение к SMTP {smtp_host}:{smtp_port}")
         if smtp_port == 465:
             with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
+                print("SSL соединение установлено")
                 server.login(smtp_user, smtp_password)
+                print("Авторизация успешна")
                 server.send_message(msg)
+                print("Письмо отправлено")
         else:
             with smtplib.SMTP(smtp_host, smtp_port) as server:
                 server.starttls()
+                print("STARTTLS соединение установлено")
                 server.login(smtp_user, smtp_password)
+                print("Авторизация успешна")
                 server.send_message(msg)
+                print("Письмо отправлено")
         
         return {
             'statusCode': 200,
