@@ -92,7 +92,14 @@ export default function AboutSection({ onCTAClick }: AboutSectionProps) {
                   АО "Джи Экс Ту Инвест" входит в международную финансовую группу с активами под управлением более <span className="font-bold text-2xl md:text-3xl text-primary">{assetsCounter}</span> млрд руб.
                 </p>
                 <p className="text-foreground/80">
-                  Лицензия на деятельность по управлению ценными бумагами Банка России № 065-12598-001000 с 2006 года.
+                  <a 
+                    href="https://www.cbr.ru/finorg/foinfo/?ogrn=1069670122829"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors underline decoration-dotted"
+                  >
+                    Лицензия на деятельность по управлению ценными бумагами Банка России № 065-12598-001000 с 2006 года.
+                  </a>
                 </p>
                 <div className="pt-6">
                   <Button 
