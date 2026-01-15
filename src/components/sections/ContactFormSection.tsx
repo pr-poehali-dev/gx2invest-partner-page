@@ -14,11 +14,9 @@ export default function ContactFormSection() {
     email: '',
     consent: false
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!formData.consent) {
       toast({
         title: "Ошибка",
@@ -27,40 +25,11 @@ export default function ContactFormSection() {
       });
       return;
     }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://functions.poehali.dev/9ad16e77-6cdc-4da5-8b92-812ba3ceb763', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Заявка отправлена!",
-          description: "Мы свяжемся с вами в ближайшее время",
-        });
-        setFormData({ name: '', phone: '', email: '', consent: false });
-      } else {
-        throw new Error('Ошибка отправки');
-      }
-    } catch (error) {
-      toast({
-        title: "Ошибка",
-        description: "Не удалось отправить заявку. Попробуйте позже.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    toast({
+      title: "Заявка отправлена!",
+      description: "Мы свяжемся с вами в ближайшее время",
+    });
+    setFormData({ name: '', phone: '', email: '', consent: false });
   };
 
   return (
@@ -145,10 +114,9 @@ export default function ContactFormSection() {
             <Button 
               type="submit" 
               size="lg"
-              disabled={isSubmitting}
-              className="w-full bg-[#F97316] text-white hover:bg-[#EA580C] text-lg py-6 disabled:opacity-50"
+              className="w-full bg-[#F97316] text-white hover:bg-[#EA580C] text-lg py-6"
             >
-              {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+              Отправить заявку
             </Button>
           </form>
         </Card>
